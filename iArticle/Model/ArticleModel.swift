@@ -12,6 +12,7 @@ struct ArticleModel {
     var title         : String
     var description   : String
     var image         : String
+//    var published     : Bool
     var authorName    : String
     var updatedAt     : String
     
@@ -20,6 +21,7 @@ struct ArticleModel {
         self.title       = article.title
         self.description = article.description
         self.image       = article.image
+//        self.published   = article.published
         self.authorName  = "By Mavin"
         self.updatedAt    = article.updatedAt.toReadableDate ?? "Not Readable"
     }

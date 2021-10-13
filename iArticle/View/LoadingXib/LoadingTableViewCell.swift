@@ -12,5 +12,4 @@ class LoadingTableViewCell: UITableViewCell {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     
-    
 }

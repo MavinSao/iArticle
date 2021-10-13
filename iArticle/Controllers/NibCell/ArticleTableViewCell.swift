@@ -21,10 +21,13 @@ class ArticleTableViewCell: UITableViewCell {
         self.titleLabel.text       = article.title
         self.descriptionLabel.text = article.description
         
-        let url = try! article.image.asURL()
-        
-        self.articleImageView.kf.setImage(with: url, placeholder: UIImage(named:"test"), options: [.transition(ImageTransition.fade(1))])
-        
+        if article.image != ""{
+            let url = try! article.image.asURL()
+            
+            self.articleImageView.kf.setImage(with: url, placeholder: UIImage(named:"default"), options: [.transition(ImageTransition.fade(1))])
+        }else{
+            self.articleImageView.image = UIImage(named:"default")
+        }
         self.articleImageView.layer.cornerRadius = 10
         
         self.authorName.text      = article.authorName

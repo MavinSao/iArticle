@@ -7,6 +7,18 @@
 
 import Foundation
 
+
+enum ImageError: Error{
+    case NoResponse
+    
+    var description: String{
+        switch self {
+        case .NoResponse:
+            return "No Response"
+        }
+    }
+}
+
 enum ArticleError: Error{
     case NoResponse
     case BadRequest
