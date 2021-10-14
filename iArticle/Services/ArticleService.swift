@@ -89,7 +89,6 @@ struct ArticleService {
         var article: [String:Any] = [
             "title"         : title,
             "description"   : description,
-            "image"   : ""
         ]
         if let safeImageUrl = imageURL{
             article["image"] = safeImageUrl
